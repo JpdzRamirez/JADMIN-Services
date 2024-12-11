@@ -105,7 +105,7 @@ class SucursalController extends Controller
             $transacciones = Transaccion::with(['cuentac'=>function($q){$q->select('id', 'conductor_CONDUCTOR')->with(['conductor'=>function($r){$r->select('CONDUCTOR', 'NOMBRE', 'NUMERO_IDENTIFICACION');}]);}])->where('tipo', 'Recarga')->whereNull('sucursales_id')->orderBy('id', 'DESC')->paginate(20);
             $suc = new stdClass();
             $user = new stdClass();
-            $user->nombres = "Sucursal Taxsur";
+            $user->nombres = "JADMIN";
             $suc->id = 0;
             $suc->user = $user;
         }
@@ -514,7 +514,7 @@ class SucursalController extends Controller
         }else{
             $suc = new stdClass();
             $user = new stdClass();
-            $user->nombres = "Sucursal Taxsur";
+            $user->nombres = "JADMIN";
             $suc->id = 0;
             $suc->user = $user;
         }
@@ -642,7 +642,7 @@ class SucursalController extends Controller
         }else{
             $suc = new stdClass();
             $user = new stdClass();
-            $user->nombres = "Sucursal Taxsur";
+            $user->nombres = "JADMIN";
             $suc->id = 0;
             $suc->user = $user;
         }

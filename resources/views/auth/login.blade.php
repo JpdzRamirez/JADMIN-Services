@@ -6,8 +6,8 @@
 		<div class="card">
 			<div class="card-body">
 				<div class="p-3">
-					<img src="/img/taxiseguro.png" height="120px" class="rounded mx-auto d-block" alt="Taxiseguro">
-					<h4 class="text-muted font-18 m-b-5 text-center">Bienvenido a Taxiseguro</h4>
+					<img src="/img/services.png" height="120px" class="rounded mx-auto d-block" alt="JADMIN">
+					<h4 class="text-muted font-18 m-b-5 text-center">Bienvenido a JADMIN</h4>
 					<p class="text-muted text-center">Digita tus credenciales para ingresar a la aplicación</p>
 					{{ Form::open(['url' => route('login'), 'method' => 'post', 'class' => 'form-horizontal m-t-30']) }}
 						<div class="form-group {{ $errors->has('usuario') ? 'form-error': '' }}">
@@ -43,7 +43,7 @@
 			</div>
 		</div>
 		<div class="m-t-40 text-center">
-			<p>© 2019 TAXSUR
+			<p>© 2019 JADMIN
 		</div>
 	</div>
 @endsection

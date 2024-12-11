@@ -1,6 +1,6 @@
 @extends('layouts.plantilla')
 
-@section('title', 'TAXSUR')
+@section('title', 'JADMIN')
     
 @section('content')
 <div class="header-bg">
@@ -10,7 +10,7 @@
                 <div class="page-title-box">
                     <h4 class="page-title">
                         <img src="/img/taxsur.jpg" width="300px" height="150px">	 
-                        @yield('sub_title', 'TAXSUR')</h4>
+                        @yield('sub_title', 'JADMIN')</h4>
                 </div>
             </div>
         </div>

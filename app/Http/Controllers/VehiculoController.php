@@ -298,7 +298,7 @@ class VehiculoController extends Controller
         $pie->addText("Nuestro objetivo es la seguridad en el transporte Publico Individual de personas", $spie, $parrafopie);
 
 
-        $section->addText("Taxiseguro S.A.S", $negrita, $parrafocen);
+        $section->addText("JADMIN", $negrita, $parrafocen);
 
         $section->addTextBreak(2);
 
@@ -348,14 +348,14 @@ class VehiculoController extends Controller
         }
 
         $objWriter = IOFactory::createWriter($phpWord, 'Word2007');
-        $namecert = 'Vehículos Taxiseguro.docx';
+        $namecert = 'Vehículos JADMIN.docx';
         $objWriter->save($namecert);
 
         $file = public_path() . '/' . $namecert;
 
         $headers = array('Content-Type: application/octet-stream');
 
-        return response()->download($file, "Vehículos Taxiseguro.docx", $headers);
+        return response()->download($file, "Vehículos JADMION.docx", $headers);
     }
 
     public function expVehiculos()

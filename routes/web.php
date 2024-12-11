@@ -22,7 +22,7 @@ Route::get('/', 'Auth\LoginController@inicio')->name('inicio');
 Route::post('login', 'Auth\LoginController@login')->name('login');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('politica_privacidad', 'UserController@privacidad');
-Route::get('/taxiseguro/politica_privacidad', 'UserController@privacidadTaxiseguro');
+Route::get('/JADMIN/politica_privacidad', 'UserController@JADMIN');
 Route::get('clientes/{email}/{sum}/restablecer', 'ClienteController@cambiarClave');
 Route::post('clientes/newpass', 'ClienteController@newPass');
 Route::get('ivr/direccion/{numero}', 'IvrController@consultarDireccion');
@@ -33,10 +33,10 @@ Route::get('restablecer/{usuario}/{clave}', 'UserController@restablecer');
 Route::post('restablecer/clave', 'UserController@restablecerClave');
 
 
-Route::get('taxsur/informacion_empresa', function () {
-    return view('elements.taxsur');
+Route::get('JADMIN/informacion_empresa', function () {
+    return view('elements.JADMINTERMS');
 });
-Route::get('taxiseguro/informacion_de_interes', function () {
+Route::get('JADMIN/informacion_de_interes', function () {
     return view('alertas.info');
 });
 

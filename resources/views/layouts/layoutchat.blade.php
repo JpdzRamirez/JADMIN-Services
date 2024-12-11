@@ -7,8 +7,8 @@
             <div class="col-sm-12">
                 <div class="page-title-box">
                     <h4 class="page-title">
-                        <img src="/img/taxiseguro.png" width="100px" height="100px">	 
-                        @yield('sub_title', 'TAXSUR')</h4>
+                        <img src="/img/services.png" width="100px" height="100px">	 
+                        @yield('sub_title', 'JADMIN')</h4>
                 </div>
             </div>
         </div>

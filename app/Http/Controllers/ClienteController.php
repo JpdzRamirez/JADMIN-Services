@@ -53,7 +53,7 @@ class ClienteController extends Controller
                 try{
                     Mail::send("alertas.codigoEmail", compact('codigo', 'email'), function ($message) use($email)
                     {
-                        $message->from("notificaciones@apptaxcenter.com", "Taxiseguro");
+                        $message->from("EMAILNotify", "JADMIN");
                         $message->to($email);
                         $message->subject("Código de verificación");
                     });
@@ -397,7 +397,7 @@ class ClienteController extends Controller
             $headers = "From:" . $from;
             
             Mail::send([], [], function ($message) use($to, $subject, $mensaje, $from){
-                $message->from($from, "Taxiseguro");
+                $message->from($from, "JADMIN");
                 $message->to($to);
                 $message->subject($subject);
                 $message->setBody($mensaje, 'text/html');

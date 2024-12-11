@@ -42,8 +42,8 @@ class NovedadController extends Controller
         $novedad->tiposnovedad_id = $request->input('tipo');
         $novedad->save();
 
-        $from = "tcenter@apptaxcenter.com";
-        $to = "direccionadministrativa@taxsur.com,comunicaciones@taxsur.com";
+        $from = "EMAILNOTIFY";
+        $to = "EMAILDEST1,EMAILDEST2";
         $subject = "Novedad registrada";
         $message = "Se ha registrado una nueva novedad en el servicio con ID:"  . $novedad->servicios_id . "\n\n" .
                     "Tipo novedad: " . $novedad->tiponovedad->nombre . "\n" .
@@ -74,9 +74,9 @@ class NovedadController extends Controller
         if($novedad->solucion != ""){
             if($novedad->servicio->vale != null){
                 try{
-                    $from = "taxisegurocrm@gmail.com";
+                    $from = "EMAILNOTIFY";
                     $to = $novedad->servicio->vale->valera->cuentae->agencia->EMAIL;
-                    $subject = "Taxiseguro:Novedad solucionada";
+                    $subject = "JADMIN:Novedad solucionada";
                     $mensaje = '<html><p>Se ha registrado una solución para la novedad presentada en el servicio <b>#' . $novedad->servicio->id . '</b>, realizado en <b>' . $novedad->servicio->fecha . '</b>. A continuación los datos de la novedad: </p> <br>' .
                       '<ul> <li> Tipo de novedad:' . $novedad->tiponovedad->nombre . '</li>'. 
                       '<li> Detalle: ' . $novedad->detalle . '</li>' .
@@ -85,7 +85,7 @@ class NovedadController extends Controller
                     $headers = "From:" . $from;
             
                     Mail::send([], [], function ($message) use($to, $subject, $mensaje, $from){
-                        $message->from($from, "Taxiseguro");
+                        $message->from($from, "JADMIN");
                         $message->to($to);
                         $message->subject($subject);
                         $message->setBody($mensaje, 'text/html');

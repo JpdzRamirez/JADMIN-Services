@@ -1,5 +1,0 @@
-
-11/06/2021 13:52:47Numero: 101
-11/06/2021 13:52:47{"id":5754,"nombres":"cristian pruebas","email":"ingprogramador@taxiseguro.co","password":null,"telefono":"101","direccion":"Cabecera trabajo","agencia":null,"longitud":"-73.110626","latitud":"7.114550","token":null}
-11/06/2021 13:56:00Numero: 101
-11/06/2021 13:56:00{"id":5754,"nombres":"cristian pruebas","email":"ingprogramador@taxiseguro.co","password":null,"telefono":"101","direccion":"Cabecera trabajo","agencia":null,"longitud":"-73.110626","latitud":"7.114550","token":null}

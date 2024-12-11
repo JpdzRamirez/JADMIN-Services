@@ -303,9 +303,9 @@ class UserController extends Controller
         return redirect("/");
     }
 
-    public function privacidadTaxiseguro()
+    public function privacidadJadmin()
     {
-         return view('elements.taxiseguro');
+         return view('elements.JADMIN');
     }
 
     public function agregarModulo()

@@ -43,12 +43,12 @@ class CuotasMensajes extends Command
         $acuerdos = Acuerdo::with(['propietario.tercero' , 'cuotasAll'=>function($q){$q->where('estado', 'Vigente')->first();}])->whereHas('cuotasAll', function($q){$q->where('estado', 'Vigente');})->get();
         foreach ($acuerdos as $acuerdo) {
             if($hoy->diffInDays($acuerdo->cuotasAll[0]->fecha_vencimiento) == 5){
-                $texto = "Hola " . $acuerdo->propietario->tercero->PRIMER_NOMBRE . ", En Taxsur queremos recordarte que la fecha límite de pago para su cuota " . $acuerdo->cuotasAll[0]->numero . " de " .
+                $texto = "Hola " . $acuerdo->propietario->tercero->PRIMER_NOMBRE . ", En JADMIN queremos recordarte que la fecha límite de pago para su cuota " . $acuerdo->cuotasAll[0]->numero . " de " .
                 $acuerdo->cuotas . " es " . $acuerdo->cuotasAll[0]->fecha_vencimiento . " .Vence en 5 días. Feliz día.";
 
                 //$this->enviarSMS($acuerdo->celular, $texto);
             }elseif($hoy->diffInDays($acuerdo->cuotasAll[0]->fecha_vencimiento) == 1){
-                $texto = "Hola " . $acuerdo->propietario->tercero->PRIMER_NOMBRE . ", En Taxsur queremos recordarte que la fecha límite de pago para su cuota " . $acuerdo->cuotasAll[0]->numero . " de " .
+                $texto = "Hola " . $acuerdo->propietario->tercero->PRIMER_NOMBRE . ", En JADMIN queremos recordarte que la fecha límite de pago para su cuota " . $acuerdo->cuotasAll[0]->numero . " de " .
                 $acuerdo->cuotas . " es mañana " . $acuerdo->cuotasAll[0]->fecha_vencimiento  . ". Feliz día.";
                 
                //$this->enviarSMS($acuerdo->celular, $texto);

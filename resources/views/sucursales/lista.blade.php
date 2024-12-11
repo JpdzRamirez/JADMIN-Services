@@ -51,8 +51,8 @@
 					<tbody>
                         <tr>
                             <td>0</td>
-                            <td>TAXSUR</td>
-                            <td>Sucursal Taxsur</td>
+                            <td>JADMIN</td>
+                            <td>Sucursal JADMIN</td>
                             <td>Activa</td>
                             <td><a href="/transacciones/sucursal/0" class="btn btn-success btn-sm" style="margin-top:1px">Transacciones</a></td>
                         </tr>

@@ -22,9 +22,9 @@
 							@if (Auth::user()->roles_id == 3 || Auth::user()->roles_id == 6)
 								<img src="/img/eds.jpg" width="100px" height="100px">
 							@else
-								<img src="/img/taxiseguro.png" width="100px" height="100px">
+								<img src="/img/services.png" width="100px" height="100px">
 							@endif				 
-							@yield('sub_title', 'TAXSUR')</h4>
+							@yield('sub_title', 'JADMIN')</h4>
 					</div>
 				</div>
 			</div>
@@ -39,7 +39,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12">
-					© 2019 TAXSUR
+					© 2019 JADMIN
 				</div>
 			</div>
 		</div>

@@ -4,7 +4,7 @@
         <table style="width: 100%">
             <thead>
                 <tr style="background-color: #1967a9; height: 4em;">
-                    <th style="color: white; font-size: 2em">Codigo de verificación Taxiseguro</th>
+                    <th style="color: white; font-size: 2em">Codigo de verificación JADMIN</th>
                 </tr>
             </thead>
             <tbody>

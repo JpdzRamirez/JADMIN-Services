@@ -269,9 +269,9 @@ class GenerarInformeTransunion extends Command
         $fechaActual = Carbon::now()->format('d-m-Y');
         try{
             Mail::send([], [], function ($message) use($archivo, $fechaActual){
-                $message->from("notificaciones@apptaxcenter.com", "Cahors");
-                $message->to(["gestion@cahors.co", "ingprogramar@taxiseguro.co"]);
-                $message->subject("Informe Transunion");
+                $message->from("EMAILNotify", "JADMIN");
+                $message->to(["EMAILDestinatary", "EMAILDestinatary2"]);
+                $message->subject("Informe");
                 $message->attach($archivo, ['as' => 'Informe Transunion - ' . $fechaActual . '.zip', 'mime' => 'application/zip']);
             });
         }

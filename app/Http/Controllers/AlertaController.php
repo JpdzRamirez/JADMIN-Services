@@ -99,8 +99,8 @@ class AlertaController extends Controller
 
     public function imporServicios(Request $request)
     {
-
-        $url = "http://201.221.157.189:8080/icon_crm/services/ModelValeVirtual?wsdl";
+        // http://201.221.157.189:8080/icon_crm/services/ModelValeVirtual?wsdl
+        $url = "SOAP URL";
 
         if ($request->filled('avianca')) {
             $servicio = Servicio::with(['valeav.valera.cuentae.agencia', 'cuentac.conductor'])->find($request->input('id'));
@@ -360,9 +360,9 @@ class AlertaController extends Controller
                     $fechan = Carbon::parse($tercero->propietario->FECHA_NACIMIENTO);
 
                     if ($hoy->day == $fechan->day && $hoy->month == $fechan->month) {
-                        $texto = "!Feliz Cumpleaños¡ " . $tercero->PRIMER_NOMBRE . ", en este día Taxsur desea enviarte un gran saludo de felicitaciones.";
+                        $texto = "!Feliz Cumpleaños¡ " . $tercero->PRIMER_NOMBRE . ", en este día JADMIN desea enviarte un gran saludo de felicitaciones.";
                     } elseif (($hoy->month == $fechan->month && $hoy->day > $fechan->day) || $hoy->month > $fechan->month) {
-                        $texto = "Dicen que nunca es tarde para felicitar a alguien, por eso Taxsur quiere enviarte un gran saludo de felicitaciones a ti " . $tercero->PRIMER_NOMBRE  . ", por tu más reciente cumpleaños.";
+                        $texto = "Dicen que nunca es tarde para felicitar a alguien, por eso JADMIN quiere enviarte un gran saludo de felicitaciones a ti " . $tercero->PRIMER_NOMBRE  . ", por tu más reciente cumpleaños.";
                     } else {
                         $texto = "no";
                     }
@@ -451,8 +451,8 @@ class AlertaController extends Controller
             }
             try {
                 Mail::send('alertas.tramite', compact('cuentac', 'solicitud', 'placa', 'monto', 'dirigido', 'email', 'celular'), function ($message) {
-                    $message->from("notificaciones@apptaxcenter.com", "Taxiseguro");
-                    $message->to(["vinculaciones@taxsur.com"]);
+                    $message->from("EmailNotify", "JADMIN-SERVICES");
+                    $message->to(["EMAILdestinatary"]);
                     $message->subject("Solicitud de documento desde la aplicación");
                 });
             } catch (Exception $ex) {
@@ -489,8 +489,8 @@ class AlertaController extends Controller
                     }
                     try {
                         Mail::send('alertas.tramite', compact('tercero', 'solicitud', 'placa', 'monto', 'dirigido', 'email', 'celular'), function ($message) {
-                            $message->from("notificaciones@apptaxcenter.com", "Taxiseguro");
-                            $message->to(["vinculaciones@taxsur.com"]);
+                            $message->from("EMAILNOTIFY", "JADMIN");
+                            $message->to(["EMAILDESTINATARY"]);
                             $message->subject("Solicitud de documento desde la aplicación");
                         });
                     } catch (Exception $ex) {
