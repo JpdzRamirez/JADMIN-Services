@@ -1163,13 +1163,13 @@ class ValeraController extends Controller
                                 $pasajero->barrio = utf8_encode($hoja->getCell('F' . $i)->getValue());
                                 $pasajero->municipio = utf8_encode($hoja->getCell('G' . $i)->getValue());
                                 $pasajero->celulares = utf8_encode($hoja->getCell('H' . $i)->getValue());
-                                curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($pasajero->barrio . ", " . $pasajero->municipio) . "&language=ES&key=AIzaSyByzEj0ALxdktnognv3gr6XCIeN3DtMw1U");
+                                curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($pasajero->barrio . ", " . $pasajero->municipio) . "&language=ES&key=apikey");
                                 $json = json_decode(curl_exec($ch));
                                 if (count($json->results) > 0) {
                                     $pasajero->lat = $json->results[0]->geometry->location->lat;
                                     $pasajero->lng = $json->results[0]->geometry->location->lng;
                                 } else {
-                                    curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($pasajero->direccion . ", " . $pasajero->municipio) . "&language=ES&key=AIzaSyByzEj0ALxdktnognv3gr6XCIeN3DtMw1U");
+                                    curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($pasajero->direccion . ", " . $pasajero->municipio) . "&language=ES&key=apikey");
                                     $json = json_decode(curl_exec($ch));
                                     if (count($json->results) > 0) {
                                         $pasajero->lat = $json->results[0]->geometry->location->lat;
@@ -1192,13 +1192,13 @@ class ValeraController extends Controller
                                     $pasajero->barrio = mb_convert_encoding($hoja->getCell('F' . $i)->getValue(), 'UTF-8', 'UTF-8');
                                     $pasajero->municipio = utf8_encode($hoja->getCell('G' . $i)->getValue());
                                     if (count($pasajeros) == 0) {
-                                        curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($pasajero->barrio . ", " . $pasajero->municipio) . "&language=ES&key=AIzaSyByzEj0ALxdktnognv3gr6XCIeN3DtMw1U");
+                                        curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($pasajero->barrio . ", " . $pasajero->municipio) . "&language=ES&key=apikey");
                                         $json = json_decode(curl_exec($ch));
                                         if (count($json->results) > 0) {
                                             $pasajero->lat = $json->results[0]->geometry->location->lat;
                                             $pasajero->lng = $json->results[0]->geometry->location->lng;
                                         } else {
-                                            curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($pasajero->direccion . ", " . $pasajero->municipio) . "&language=ES&key=AIzaSyByzEj0ALxdktnognv3gr6XCIeN3DtMw1U");
+                                            curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($pasajero->direccion . ", " . $pasajero->municipio) . "&language=ES&key=apikey");
                                             $json = json_decode(curl_exec($ch));
                                             if (count($json->results) > 0) {
                                                 $pasajero->lat = $json->results[0]->geometry->location->lat;
@@ -1289,13 +1289,13 @@ class ValeraController extends Controller
                             $direccion = utf8_encode($hoja->getCell('D' . $i)->getValue());
                             $pasajero->barrio = $hoja->getCell('E' . $i)->getValue();
                             $pasajero->direccion = $direccion;
-                            curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($pasajero->barrio . ", " . $pasajero->municipio) . "&language=ES&key=AIzaSyByzEj0ALxdktnognv3gr6XCIeN3DtMw1U");
+                            curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($pasajero->barrio . ", " . $pasajero->municipio) . "&language=ES&key=apikey");
                             $json = json_decode(curl_exec($ch));
                             if (count($json->results) > 0) {
                                 $pasajero->lat = $json->results[0]->geometry->location->lat;
                                 $pasajero->lng = $json->results[0]->geometry->location->lng;
                             } else {
-                                curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($pasajero->direccion . ", " . $pasajero->municipio) . "&language=ES&key=AIzaSyByzEj0ALxdktnognv3gr6XCIeN3DtMw1U");
+                                curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($pasajero->direccion . ", " . $pasajero->municipio) . "&language=ES&key=apikey");
                                 $json = json_decode(curl_exec($ch));
                                 $pasajero->lat = $json->results[0]->geometry->location->lat;
                                 $pasajero->lng = $json->results[0]->geometry->location->lng;
@@ -1307,13 +1307,13 @@ class ValeraController extends Controller
                                 $pasajero->celulares = $hoja->getCell('C' . $i)->getValue();
                                 $pasajero->barrio = $hoja->getCell('E' . $i)->getValue();
                                 $pasajero->municipio = $hoja->getCell('F' . $i)->getValue();
-                                curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($pasajero->barrio . ", " . $pasajero->municipio) . "&language=ES&key=AIzaSyByzEj0ALxdktnognv3gr6XCIeN3DtMw1U");
+                                curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($pasajero->barrio . ", " . $pasajero->municipio) . "&language=ES&key=apikey");
                                 $json = json_decode(curl_exec($ch));
                                 if (count($json->results) > 0) {
                                     $pasajero->lat = $json->results[0]->geometry->location->lat;
                                     $pasajero->lng = $json->results[0]->geometry->location->lng;
                                 } else {
-                                    curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($pasajero->direccion . ", " . $pasajero->municipio) . "&language=ES&key=AIzaSyByzEj0ALxdktnognv3gr6XCIeN3DtMw1U");
+                                    curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($pasajero->direccion . ", " . $pasajero->municipio) . "&language=ES&key=apikey");
                                     $json = json_decode(curl_exec($ch));
                                     $pasajero->lat = $json->results[0]->geometry->location->lat;
                                     $pasajero->lng = $json->results[0]->geometry->location->lng;

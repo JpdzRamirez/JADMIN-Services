@@ -205,7 +205,7 @@ class TerceroController extends Controller
                         if ($agencia->TERCERO == 356) {
                             $numseg = count($vale->servicio->seguimientos);
                             if ($numseg > 0) {
-                                curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?latlng=" . $vale->servicio->seguimientos[$numseg - 1]->latitud . "," . $vale->servicio->seguimientos[$numseg - 1]->longitud . "&language=ES&key=AIzaSyByzEj0ALxdktnognv3gr6XCIeN3DtMw1U");
+                                curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?latlng=" . $vale->servicio->seguimientos[$numseg - 1]->latitud . "," . $vale->servicio->seguimientos[$numseg - 1]->longitud . "&language=ES&key=apikey");
                                 $json = json_decode(curl_exec($ch));
                                 if (count($json->results) > 0) {
                                     $sheet->setCellValue("J" . $indice, $json->results[0]->formatted_address);
@@ -641,13 +641,13 @@ class TerceroController extends Controller
                             $pasajero->barrio = utf8_encode($hoja->getCell('E' . $i)->getValue());
                             $pasajero->direccion = $direccion;
                             curl_setopt($ch, CURLOPT_VERBOSE, true);
-                            curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($pasajero->barrio . ", " . $pasajero->municipio) . "&language=ES&key=AIzaSyByzEj0ALxdktnognv3gr6XCIeN3DtMw1U");
+                            curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($pasajero->barrio . ", " . $pasajero->municipio) . "&language=ES&key=apikey");
                             $json = json_decode(curl_exec($ch));
                             if (count($json->results) > 0) {
                                 $pasajero->lat = $json->results[0]->geometry->location->lat;
                                 $pasajero->lng = $json->results[0]->geometry->location->lng;
                             } else {
-                                curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($pasajero->direccion . ", " . $pasajero->municipio) . "&language=ES&key=AIzaSyByzEj0ALxdktnognv3gr6XCIeN3DtMw1U");
+                                curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($pasajero->direccion . ", " . $pasajero->municipio) . "&language=ES&key=apikey");
                                 $json = json_decode(curl_exec($ch));
                                 if (count($json->results) > 0) {
                                     $pasajero->lat = $json->results[0]->geometry->location->lat;
@@ -667,13 +667,13 @@ class TerceroController extends Controller
                                 $pasajero->barrio = utf8_encode($hoja->getCell('E' . $i)->getValue());
                                 $pasajero->municipio = utf8_encode($hoja->getCell('F' . $i)->getValue());
                                 if (count($pasajeros) == 0) {
-                                    curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($pasajero->barrio . ", " . $pasajero->municipio) . "&language=ES&key=AIzaSyByzEj0ALxdktnognv3gr6XCIeN3DtMw1U");
+                                    curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($pasajero->barrio . ", " . $pasajero->municipio) . "&language=ES&key=apikey");
                                     $json = json_decode(curl_exec($ch));
                                     if (count($json->results) > 0) {
                                         $pasajero->lat = $json->results[0]->geometry->location->lat;
                                         $pasajero->lng = $json->results[0]->geometry->location->lng;
                                     } else {
-                                        curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($pasajero->direccion . ", " . $pasajero->municipio) . "&language=ES&key=AIzaSyByzEj0ALxdktnognv3gr6XCIeN3DtMw1U");
+                                        curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($pasajero->direccion . ", " . $pasajero->municipio) . "&language=ES&key=apikey");
                                         $json = json_decode(curl_exec($ch));
                                         if (count($json->results) > 0) {
                                             $pasajero->lat = $json->results[0]->geometry->location->lat;
@@ -1336,7 +1336,7 @@ class TerceroController extends Controller
             if ($pasajero->direccion != null && $pasajero->municipio != null) {
                 $ch = curl_init();
                 $dirtemp = urlencode($pasajero->direccion . ", " . $municipio);
-                $url = "https://maps.googleapis.com/maps/api/geocode/json?address={$dirtemp}&language=ES&key=AIzaSyByzEj0ALxdktnognv3gr6XCIeN3DtMw1U";
+                $url = "https://maps.googleapis.com/maps/api/geocode/json?address={$dirtemp}&language=ES&key=apikey";
                 // Configurar opciones de cURL
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                 curl_setopt($ch, CURLOPT_URL, $url);
@@ -1413,7 +1413,7 @@ class TerceroController extends Controller
                 if ($pasajero->direccion != $direccion || $pasajero->municipio != $municipio) {
                     $ch = curl_init();
                     $dirtemp = urlencode($pasajero->direccion . ", " . $municipio);
-                    $url = "https://maps.googleapis.com/maps/api/geocode/json?address={$dirtemp}&language=ES&key=AIzaSyByzEj0ALxdktnognv3gr6XCIeN3DtMw1U";
+                    $url = "https://maps.googleapis.com/maps/api/geocode/json?address={$dirtemp}&language=ES&key=apikey";
                     // Configurar opciones de cURL
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                     curl_setopt($ch, CURLOPT_URL, $url);

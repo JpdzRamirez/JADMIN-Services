@@ -94,7 +94,7 @@ class SisorgController extends Controller
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($direccion) . "&language=ES&key=AIzaSyByzEj0ALxdktnognv3gr6XCIeN3DtMw1U");
+        curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($direccion) . "&language=ES&key=apikey");
         $json = json_decode(curl_exec($ch));
         if (count($json->results) > 0) {
             return $json->results[0]->geometry->location;

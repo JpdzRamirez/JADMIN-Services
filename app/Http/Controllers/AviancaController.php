@@ -882,7 +882,7 @@ class AviancaController extends Controller
 
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($pasajero->direccion . ", " . $pasajero->zona) . "&language=ES&key=AIzaSyByzEj0ALxdktnognv3gr6XCIeN3DtMw1U");
+            curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($pasajero->direccion . ", " . $pasajero->zona) . "&language=ES&key=apikey");
             $json = json_decode(curl_exec($ch));
             if (count($json->results) > 0) {
                 $pasajero->latitud = $json->results[0]->geometry->location->lat;
@@ -921,7 +921,7 @@ class AviancaController extends Controller
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($pasajero->direccion . ", " . $pasajero->zona) . "&language=ES&key=AIzaSyByzEj0ALxdktnognv3gr6XCIeN3DtMw1U");
+        curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($pasajero->direccion . ", " . $pasajero->zona) . "&language=ES&key=apikey");
         $json = json_decode(curl_exec($ch));
         if (count($json->results) > 0) {
             $pasajero->latitud = $json->results[0]->geometry->location->lat;
@@ -961,7 +961,7 @@ class AviancaController extends Controller
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
         foreach ($pasajeros as $pasajero) {
-            curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($pasajero->direccion . ", " . $pasajero->zona) . "&language=ES&key=AIzaSyByzEj0ALxdktnognv3gr6XCIeN3DtMw1U");
+            curl_setopt($ch, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode($pasajero->direccion . ", " . $pasajero->zona) . "&language=ES&key=apikey");
             $json = json_decode(curl_exec($ch));
             if (count($json->results) > 0) {
                 $pasajero->latitud = $json->results[0]->geometry->location->lat;

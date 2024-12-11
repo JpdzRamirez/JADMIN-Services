@@ -592,7 +592,7 @@
 
 @section('script')
 <script src="https://openlayers.org/en/v6.9.0/build/ol.js" type="text/javascript"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByzEj0ALxdktnognv3gr6XCIeN3DtMw1U&callback=initMap" defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=apikey&callback=initMap" defer></script>
 	<script>
 		var container = document.getElementById('popup');
 		var content = document.getElementById('popup-content');

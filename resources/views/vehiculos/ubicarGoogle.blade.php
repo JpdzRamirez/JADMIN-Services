@@ -331,7 +331,7 @@
     });
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByzEj0ALxdktnognv3gr6XCIeN3DtMw1U&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=apikey&callback=initMap" async defer></script>
 @endsection
 @section('sincro')
 	<script src="{{ mix('/js/sincronizacion.js') }}"></script>

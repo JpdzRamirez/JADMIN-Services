@@ -439,7 +439,7 @@
 @endsection
 
 @section('script')
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByzEj0ALxdktnognv3gr6XCIeN3DtMw1U&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=apikey&callback=initMap" async defer></script>
 	<script>
 		var marker, map, geocoder, lugar, sincronizador, time;
 		lugar = new Array();
