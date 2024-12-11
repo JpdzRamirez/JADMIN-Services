@@ -1,0 +1,9 @@
+
+23/06/2022 11:46:57SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select `id`, `estado`, `placa`, `latitud`, `longitud`, `ultimasesion` from `cuentasc` where `cuentasc`.`id` = 15 limit 1)
+01/05/2024 11:54:29SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select `id`, `estado`, `placa`, `latitud`, `longitud`, `ultimasesion` from `cuentasc` where `cuentasc`.`id` = 15 limit 1)
+01/05/2024 11:56:32SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select `id`, `estado`, `placa`, `latitud`, `longitud`, `ultimasesion` from `cuentasc` where `cuentasc`.`id` = 15 limit 1)
+01/05/2024 12:01:56SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select `id`, `estado`, `placa`, `latitud`, `longitud`, `ultimasesion` from `cuentasc` where `cuentasc`.`id` = 15 limit 1)
+01/05/2024 12:04:53SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select `id`, `estado`, `placa`, `latitud`, `longitud`, `ultimasesion` from `cuentasc` where `cuentasc`.`id` = 15 limit 1)
+02/05/2024 08:24:08SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: YES) (SQL: select `id`, `estado`, `placa`, `latitud`, `longitud`, `ultimasesion` from `cuentasc` where `cuentasc`.`id` = 15 limit 1)
+02/05/2024 08:32:12SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: YES) (SQL: select `id`, `estado`, `placa`, `latitud`, `longitud`, `ultimasesion` from `cuentasc` where `cuentasc`.`id` = 15 limit 1)
+02/05/2024 08:56:48SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: YES) (SQL: select `id`, `estado`, `placa`, `latitud`, `longitud`, `ultimasesion` from `cuentasc` where `cuentasc`.`id` = 15 limit 1)
