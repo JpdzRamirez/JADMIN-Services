@@ -1,6 +1,6 @@
 # CRM JADMIN SERVICES: Una Solución Integral para la Gestión de Servicios y Operaciones
 <div align="center">
- <img align="center" width="300px" src="https://www.jitterbit.com/wp-content/uploads/blog-feature-CRM-Integration-Explained.jpg" alt="JADMIN CRM"/>
+ <img align="center" width="500px" src="https://www.jitterbit.com/wp-content/uploads/blog-feature-CRM-Integration-Explained.jpg" alt="JADMIN CRM"/>
 </div>
 
 El CRM JADMIN SERVICES es una herramienta poderosa y versátil desarrollada en PHP v7 con una base de datos MySQL, diseñada para optimizar la gestión empresarial en tiempo real. Esta aplicación ofrece un conjunto de funcionalidades clave que se adaptan a las necesidades de empresas que manejan operaciones logísticas y de transporte, asegurando una administración eficiente y precisa.
@@ -18,7 +18,7 @@ Control de Servicios
 
 ## Seguimiento de los servicios en tres estados:
 <div align="center">
- <img align="center" width="300px" src="https://github.com/user-attachments/assets/4006ea38-40a6-44eb-a713-230c86646259" alt="CRM JADMIN Vehicles Services"/>
+ <img align="center" width="500px" src="https://github.com/user-attachments/assets/4006ea38-40a6-44eb-a713-230c86646259" alt="CRM JADMIN Vehicles Services"/>
 </div>
 En curso: Monitoreo activo de los servicios que se están realizando.
 Finalizados: Registro detallado de los servicios completados.
@@ -28,7 +28,7 @@ Gestión de Vehículos en Tiempo Real
 
 ## Visualización del estado de los vehículos:
 <div align="center">
- <img align="center" width="300px" src="https://github.com/user-attachments/assets/fdaf0911-e230-486e-9a04-4bd754beed80" alt="CRM JADMIN Vehicles Control"/>
+ <img align="center" width="500px" src="https://github.com/user-attachments/assets/fdaf0911-e230-486e-9a04-4bd754beed80" alt="CRM JADMIN Vehicles Control"/>
 </div>
 
 Ocupados: En uso activo.
@@ -38,7 +38,12 @@ Sistema de Control de Vales
 
 
 ## Registro y administración de vales para gestionar gastos y beneficios de manera eficiente.
-Sistema de Notificaciones de Mensajes
+<div align="center">
+ <img align="center" width="500px" src="https://github.com/user-attachments/assets/680cd2a6-4b2c-4dce-83af-1f9c2983fb61" alt="CRM JADMIN Vehicles Control"/>
+</div>
+Sistema de control de valeras electronicas para el pedido de vehiculos por medio de la aplicación. Permite controlar los servicios facturados para cada empresa de manera automatica.
+
+## Sistema de Notificaciones de Mensajes
 
 ## Comunicación fluida entre usuarios y conductores.
 Notificaciones en tiempo real para mantener a todos los actores informados.
