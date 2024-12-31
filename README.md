@@ -1,6 +1,6 @@
 # CRM JADMIN SERVICES: Una Solución Integral para la Gestión de Servicios y Operaciones
 <div align="center">
- <img align="center" width="300px" src="https://github.com/user-attachments/assets/a82efc0a-60d6-4429-ab16-945fba99bf71" alt="Softlogy Helpdesk"/>
+ <img align="center" width="300px" src="https://www.jitterbit.com/wp-content/uploads/blog-feature-CRM-Integration-Explained.jpg" alt="JADMIN CRM"/>
 </div>
 
 El CRM JADMIN SERVICES es una herramienta poderosa y versátil desarrollada en PHP v7 con una base de datos MySQL, diseñada para optimizar la gestión empresarial en tiempo real. Esta aplicación ofrece un conjunto de funcionalidades clave que se adaptan a las necesidades de empresas que manejan operaciones logísticas y de transporte, asegurando una administración eficiente y precisa.
