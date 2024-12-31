@@ -1,8 +1,44 @@
-# CRM JADMIN
+# CRM JADMIN SERVICES: Una Solución Integral para la Gestión de Servicios y Operaciones
 
+El CRM JADMIN SERVICES es una herramienta poderosa y versátil desarrollada en PHP v7 con una base de datos MySQL, diseñada para optimizar la gestión empresarial en tiempo real. Esta aplicación ofrece un conjunto de funcionalidades clave que se adaptan a las necesidades de empresas que manejan operaciones logísticas y de transporte, asegurando una administración eficiente y precisa.
 
-## Instalar dependencias
+## Principales Características
+Control de Usuarios, Roles y Permisos
 
-```
-composer update
-```
+## Gestión de acceso para garantizar la seguridad de la información.
+Personalización de permisos según roles específicos, brindando una experiencia segura y organizada para cada usuario.
+Generación de Informes y Carga Masiva de Rutas
+
+## Creación automatizada de informes detallados para análisis y toma de decisiones.
+Herramientas para cargar rutas de forma masiva, facilitando la planificación y la gestión operativa.
+Control de Servicios
+
+## Seguimiento de los servicios en tres estados:
+En curso: Monitoreo activo de los servicios que se están realizando.
+Finalizados: Registro detallado de los servicios completados.
+En servicio: Control de los servicios en proceso de ejecución.
+Gestión de Vehículos en Tiempo Real
+
+## Visualización del estado de los vehículos:
+Ocupados: En uso activo.
+Libres: Disponibles para asignación.
+Categoría especial: Vehículos con características específicas o asignaciones prioritarias.
+Sistema de Control de Vales
+
+## Registro y administración de vales para gestionar gastos y beneficios de manera eficiente.
+Sistema de Notificaciones de Mensajes
+
+## Comunicación fluida entre usuarios y conductores.
+Notificaciones en tiempo real para mantener a todos los actores informados.
+Gestión de Clientes, Conductores y Pasajeros
+
+## Información centralizada para un manejo integral de las relaciones con los clientes y los usuarios finales.
+Alertas Globales a Conductores
+Emisión de alertas en tiempo real para coordinar actividades y advertir sobre situaciones importantes.
+
+## Beneficios del CRM JADMIN SERVICES
+Eficiencia Operativa: Automatización de procesos clave para ahorrar tiempo y recursos.
+Control Centralizado: Una sola plataforma para gestionar todos los aspectos del negocio.
+Toma de Decisiones Informada: Datos precisos y actualizados para análisis estratégico.
+Escalabilidad: Adaptable a las necesidades de empresas de diferentes tamaños y sectores.
+El CRM JADMIN SERVICES no solo es una solución tecnológica avanzada, sino también una herramienta estratégica diseñada para mejorar la experiencia del cliente, optimizar el rendimiento operativo y garantizar el control total sobre las operaciones en tiempo real.

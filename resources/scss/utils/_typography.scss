@@ -1,0 +1,169 @@
+@use "./variables" as *;
+// letra main body tipo ubuntu
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+// letra cursiva
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Playwrite+BE+VLG:wght@100..400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+/*   Typography    */
+body, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, .btn-simple, .alert, a, .td-name, td, button.close {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Public Sans', sans-serif; }
+
+body, html {
+  font-size: 14px;
+  color: #2A2F5B; }
+
+a {
+  color: #1572E8;
+  text-decoration: none !important; }
+  a:hover, a:focus {
+    color: #1269DB; }
+
+h1,
+.h1 {
+  font-size: 2.15rem; }
+
+h2,
+.h2 {
+  font-size: 1.85rem; }
+
+h3,
+.h3 {
+  font-size: 1.64rem; }
+
+h4,
+.h4 {
+  font-size: 1.48rem; }
+
+h5,
+.h5 {
+  font-size: 1.3rem;
+  font-weight: 400; }
+
+h6,
+.h6 {
+  font-size: 1.07rem;
+  font-weight: 400; }
+
+p {
+  font-size: 1.07rem;
+  line-height: 1.82;
+  margin-bottom: 1rem;
+  word-break: break-word; }
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  line-height: 1.5; }
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .h1 a, .h2 a, .h3 a, .h4 a, .h5 a, .h6 a {
+    color: inherit; }
+
+small, .small {
+  font-size: 13px; }
+
+b, .b, strong, .strong {
+  font-weight: 600; }
+
+.page-pretitle {
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #95aac9; }
+
+.page-title {
+  font-size: 23px;
+  font-weight: 600;
+  color: $blanco;
+  line-height: 30px;
+  margin-bottom: 20px; }
+
+.page-category {
+  color: #444444;
+  line-height: 1.8;
+  margin-bottom: 25px; }
+
+.text-primary, .text-primary a {
+  color: #1572E8 !important; }
+  .text-primary:hover, .text-primary a:hover {
+    color: #1572E8 !important; }
+
+.text-secondary, .text-secondary a {
+  color: #6861CE !important; }
+  .text-secondary:hover, .text-secondary a:hover {
+    color: #6861CE !important; }
+
+.text-info, .text-info a {
+  color: #48ABF7 !important; }
+  .text-info:hover, .text-info a:hover {
+    color: #48ABF7 !important; }
+
+.text-success, .text-success a {
+  color: #31CE36 !important; }
+  .text-success:hover, .text-success a:hover {
+    color: #31CE36 !important; }
+
+.text-warning, .text-warning a {
+  color: #FFAD46 !important; }
+  .text-warning:hover, .text-warning a:hover {
+    color: #FFAD46 !important; }
+
+.text-danger, .text-danger a {
+  color: #F25961 !important; }
+  .text-danger:hover, .text-danger a:hover {
+    color: #F25961 !important; }
+
+label {
+  color: #495057 !important;
+  font-size: 14px !important; }
+
+.text-small {
+  font-size: 11px; }
+
+.metric-value {
+  margin-bottom: 5px;
+  line-height: 1;
+  white-space: nowrap; }
+
+.metric-label {
+  font-size: .975rem;
+  font-weight: 500;
+  color: #686f76;
+  white-space: nowrap;
+  margin-bottom: 0; }
+
+/*   Font-weight    */
+.fw-light {
+  font-weight: 300 !important; }
+
+.fw-normal {
+  font-weight: 400 !important; }
+
+.fw-mediumbold {
+  font-weight: 500 !important; }
+
+.fw-bold {
+  font-weight: 600 !important; }
+
+.fw-extrabold {
+  font-weight: 700 !important; }
+
+/* 		Opacity  	*/
+.op-9 {
+  opacity: 0.9 !important; }
+
+.op-8 {
+  opacity: 0.8 !important; }
+
+.op-7 {
+  opacity: 0.7 !important; }
+
+.op-6 {
+  opacity: 0.6 !important; }
+
+.op-5 {
+  opacity: 0.5 !important; }
+
+.op-4 {
+  opacity: 0.4 !important; }
+
+.op-3 {
+  opacity: 0.3 !important; }

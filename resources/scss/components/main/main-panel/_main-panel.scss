@@ -1,0 +1,16 @@
+
+
+.buttons-list-container{
+    display: flex;
+    flex-direction: column;
+    .buttons-list-items{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        a {
+            white-space: normal;
+            word-wrap: break-word;
+        
+        }
+    }
+}

@@ -1,0 +1,716 @@
+@use "../utils" as *;
+
+*:focus {
+  outline: 0 !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important; 
+}
+
+html {
+    // box-sizing: border-box;
+    // width: 100vw !important;
+    // padding: 0;
+    scroll-behavior: smooth;
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23EFB519" d="M4.5.79v22.42l6.56-6.57h9.29L4.5.79z"></path></svg>'),
+        default !important;
+}
+body {
+    color: $negro;
+    overflow-x: hidden;
+    // width: 99vw;
+    // height: 100%;
+    font-family: "Ubuntu", sans-serif !important;
+    font-weight: 400;
+    font-style: normal;
+    //background-image: url(/Resources/img/background.png);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23EFB519" d="M4.5.79v22.42l6.56-6.57h9.29L4.5.79z"></path></svg>'),
+        default !important;
+}
+
+/*    Basic Layouts     */
+body {
+    min-height: 100vh;
+    position: relative;
+    background: #f5f7fd;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.body-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.15;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+}
+
+/* 	 Background Body */
+body {
+    background: #f5f7fd;
+}
+body[data-background-color="bg1"] {
+    background: #f5f7fd;
+}
+body[data-background-color="bg2"] {
+    background: #ffffff;
+}
+body[data-background-color="bg3"] {
+    background: #f1f1f1;
+}
+body[data-background-color="dark"] {
+    background: #1a2035;
+}
+body[data-background-color="dark2"] {
+    background: #151a2b;
+}
+body[data-background-color="dark"] .text-muted,
+body[data-background-color="dark2"] .text-muted {
+    color: #b9babf !important;
+}
+body[data-background-color="dark"] .main-header,
+body[data-background-color="dark2"] .main-header {
+    box-shadow: 0px 0px 5px #121727;
+}
+body[data-background-color="dark"] .main-panel,
+body[data-background-color="dark2"] .main-panel {
+    color: rgba(169, 175, 187, 0.82);
+}
+body[data-background-color="dark"] .main-panel p,
+body[data-background-color="dark"] .main-panel input[type="file"],
+body[data-background-color="dark"]
+    .main-panel
+    .card:not(
+        .card-primary,
+        .card-secondary,
+        .card-info,
+        .card-success,
+        .card-warning,
+        .card-danger
+    )
+    .card-body,
+body[data-background-color="dark2"] .main-panel p,
+body[data-background-color="dark2"] .main-panel input[type="file"],
+body[data-background-color="dark2"]
+    .main-panel
+    .card:not(
+        .card-primary,
+        .card-secondary,
+        .card-info,
+        .card-success,
+        .card-warning,
+        .card-danger
+    )
+    .card-body {
+    color: rgba(169, 175, 187, 0.82);
+}
+body[data-background-color="dark"] .main-panel .h1,
+body[data-background-color="dark"] .main-panel .h2,
+body[data-background-color="dark"] .main-panel .h3,
+body[data-background-color="dark"] .main-panel .h4,
+body[data-background-color="dark"] .main-panel .h5,
+body[data-background-color="dark"] .main-panel .h6,
+body[data-background-color="dark"] .main-panel h1,
+body[data-background-color="dark"] .main-panel h2,
+body[data-background-color="dark"] .main-panel h3,
+body[data-background-color="dark"] .main-panel h4,
+body[data-background-color="dark"] .main-panel h5,
+body[data-background-color="dark"] .main-panel h6,
+body[data-background-color="dark"] .main-panel label,
+body[data-background-color="dark"] .main-panel .badge-count,
+body[data-background-color="dark2"] .main-panel .h1,
+body[data-background-color="dark2"] .main-panel .h2,
+body[data-background-color="dark2"] .main-panel .h3,
+body[data-background-color="dark2"] .main-panel .h4,
+body[data-background-color="dark2"] .main-panel .h5,
+body[data-background-color="dark2"] .main-panel .h6,
+body[data-background-color="dark2"] .main-panel h1,
+body[data-background-color="dark2"] .main-panel h2,
+body[data-background-color="dark2"] .main-panel h3,
+body[data-background-color="dark2"] .main-panel h4,
+body[data-background-color="dark2"] .main-panel h5,
+body[data-background-color="dark2"] .main-panel h6,
+body[data-background-color="dark2"] .main-panel label,
+body[data-background-color="dark2"] .main-panel .badge-count {
+    color: #fff !important;
+}
+body[data-background-color="dark"]
+    .card:not(
+        .card-primary,
+        .card-secondary,
+        .card-info,
+        .card-success,
+        .card-warning,
+        .card-danger,
+        .card-list-messages
+    ),
+body[data-background-color="dark"] .row-card-no-pd,
+body[data-background-color="dark"] .list-group-item.unread,
+body[data-background-color="dark"] .timeline > li > .timeline-panel,
+body[data-background-color="dark2"]
+    .card:not(
+        .card-primary,
+        .card-secondary,
+        .card-info,
+        .card-success,
+        .card-warning,
+        .card-danger,
+        .card-list-messages
+    ),
+body[data-background-color="dark2"] .row-card-no-pd,
+body[data-background-color="dark2"] .list-group-item.unread,
+body[data-background-color="dark2"] .timeline > li > .timeline-panel {
+    background: #202940 !important;
+}
+body[data-background-color="dark"] .card-list-messages,
+body[data-background-color="dark2"] .card-list-messages {
+    background: transparent !important;
+}
+body[data-background-color="dark"] .card-pricing2,
+body[data-background-color="dark2"] .card-pricing2 {
+    background: #202940 !important;
+}
+body[data-background-color="dark"] .row-card-no-pd [class*="col"] .card:before,
+body[data-background-color="dark2"]
+    .row-card-no-pd
+    [class*="col"]
+    .card:before {
+    background: rgba(181, 181, 181, 0.1) !important;
+}
+body[data-background-color="dark"] .card .card-header,
+body[data-background-color="dark"] .card .card-footer,
+body[data-background-color="dark"] .card .card-action,
+body[data-background-color="dark"] .card-profile .user-stats [class^="col"],
+body[data-background-color="dark"] .timeline > li > .timeline-panel,
+body[data-background-color="dark"] .table td,
+body[data-background-color="dark"] .table th,
+body[data-background-color="dark"] .breadcrumbs,
+body[data-background-color="dark"] .separator-dashed,
+body[data-background-color="dark"] .separator-solid,
+body[data-background-color="dark"] .separator-dot,
+body[data-background-color="dark"] .list-group .list-group-item,
+body[data-background-color="dark"] .conversations .messages-form,
+body[data-background-color="dark"]
+    .mail-wrapper
+    .mail-content
+    .inbox-body
+    .email-list
+    .email-list-item,
+body[data-background-color="dark"] .page-with-aside .page-aside,
+body[data-background-color="dark"] .mail-wrapper .mail-content .email-head,
+body[data-background-color="dark"] .mail-wrapper .mail-content .email-sender,
+body[data-background-color="dark"] .main-panel .page-divider,
+body[data-background-color="dark2"] .card .card-header,
+body[data-background-color="dark2"] .card .card-footer,
+body[data-background-color="dark2"] .card .card-action,
+body[data-background-color="dark2"] .card-profile .user-stats [class^="col"],
+body[data-background-color="dark2"] .timeline > li > .timeline-panel,
+body[data-background-color="dark2"] .table td,
+body[data-background-color="dark2"] .table th,
+body[data-background-color="dark2"] .breadcrumbs,
+body[data-background-color="dark2"] .separator-dashed,
+body[data-background-color="dark2"] .separator-solid,
+body[data-background-color="dark2"] .separator-dot,
+body[data-background-color="dark2"] .list-group .list-group-item,
+body[data-background-color="dark2"] .conversations .messages-form,
+body[data-background-color="dark2"]
+    .mail-wrapper
+    .mail-content
+    .inbox-body
+    .email-list
+    .email-list-item,
+body[data-background-color="dark2"] .page-with-aside .page-aside,
+body[data-background-color="dark2"] .mail-wrapper .mail-content .email-head,
+body[data-background-color="dark2"] .mail-wrapper .mail-content .email-sender,
+body[data-background-color="dark2"] .main-panel .page-divider {
+    border-color: rgba(181, 181, 181, 0.1) !important;
+    color: rgba(169, 175, 187, 0.82);
+    background: transparent;
+}
+body[data-background-color="dark"] .card-primary p,
+body[data-background-color="dark"] .card-primary i,
+body[data-background-color="dark"] .card-primary input[type="file"],
+body[data-background-color="dark"] .card-secondary p,
+body[data-background-color="dark"] .card-secondary i,
+body[data-background-color="dark"] .card-secondary input[type="file"],
+body[data-background-color="dark"] .card-info p,
+body[data-background-color="dark"] .card-info i,
+body[data-background-color="dark"] .card-info input[type="file"],
+body[data-background-color="dark"] .card-success p,
+body[data-background-color="dark"] .card-success i,
+body[data-background-color="dark"] .card-success input[type="file"],
+body[data-background-color="dark"] .card-warning p,
+body[data-background-color="dark"] .card-warning i,
+body[data-background-color="dark"] .card-warning input[type="file"],
+body[data-background-color="dark"] .card-danger p,
+body[data-background-color="dark"] .card-danger i,
+body[data-background-color="dark"] .card-danger input[type="file"],
+body[data-background-color="dark2"] .card-primary p,
+body[data-background-color="dark2"] .card-primary i,
+body[data-background-color="dark2"] .card-primary input[type="file"],
+body[data-background-color="dark2"] .card-secondary p,
+body[data-background-color="dark2"] .card-secondary i,
+body[data-background-color="dark2"] .card-secondary input[type="file"],
+body[data-background-color="dark2"] .card-info p,
+body[data-background-color="dark2"] .card-info i,
+body[data-background-color="dark2"] .card-info input[type="file"],
+body[data-background-color="dark2"] .card-success p,
+body[data-background-color="dark2"] .card-success i,
+body[data-background-color="dark2"] .card-success input[type="file"],
+body[data-background-color="dark2"] .card-warning p,
+body[data-background-color="dark2"] .card-warning i,
+body[data-background-color="dark2"] .card-warning input[type="file"],
+body[data-background-color="dark2"] .card-danger p,
+body[data-background-color="dark2"] .card-danger i,
+body[data-background-color="dark2"] .card-danger input[type="file"] {
+    color: #fff;
+}
+body[data-background-color="dark"] .card-primary .h1,
+body[data-background-color="dark"] .card-primary .h2,
+body[data-background-color="dark"] .card-primary .h3,
+body[data-background-color="dark"] .card-primary .h4,
+body[data-background-color="dark"] .card-primary .h5,
+body[data-background-color="dark"] .card-primary .h6,
+body[data-background-color="dark"] .card-primary h1,
+body[data-background-color="dark"] .card-primary h2,
+body[data-background-color="dark"] .card-primary h3,
+body[data-background-color="dark"] .card-primary h4,
+body[data-background-color="dark"] .card-primary h5,
+body[data-background-color="dark"] .card-primary h6,
+body[data-background-color="dark"] .card-secondary .h1,
+body[data-background-color="dark"] .card-secondary .h2,
+body[data-background-color="dark"] .card-secondary .h3,
+body[data-background-color="dark"] .card-secondary .h4,
+body[data-background-color="dark"] .card-secondary .h5,
+body[data-background-color="dark"] .card-secondary .h6,
+body[data-background-color="dark"] .card-secondary h1,
+body[data-background-color="dark"] .card-secondary h2,
+body[data-background-color="dark"] .card-secondary h3,
+body[data-background-color="dark"] .card-secondary h4,
+body[data-background-color="dark"] .card-secondary h5,
+body[data-background-color="dark"] .card-secondary h6,
+body[data-background-color="dark"] .card-info .h1,
+body[data-background-color="dark"] .card-info .h2,
+body[data-background-color="dark"] .card-info .h3,
+body[data-background-color="dark"] .card-info .h4,
+body[data-background-color="dark"] .card-info .h5,
+body[data-background-color="dark"] .card-info .h6,
+body[data-background-color="dark"] .card-info h1,
+body[data-background-color="dark"] .card-info h2,
+body[data-background-color="dark"] .card-info h3,
+body[data-background-color="dark"] .card-info h4,
+body[data-background-color="dark"] .card-info h5,
+body[data-background-color="dark"] .card-info h6,
+body[data-background-color="dark"] .card-success .h1,
+body[data-background-color="dark"] .card-success .h2,
+body[data-background-color="dark"] .card-success .h3,
+body[data-background-color="dark"] .card-success .h4,
+body[data-background-color="dark"] .card-success .h5,
+body[data-background-color="dark"] .card-success .h6,
+body[data-background-color="dark"] .card-success h1,
+body[data-background-color="dark"] .card-success h2,
+body[data-background-color="dark"] .card-success h3,
+body[data-background-color="dark"] .card-success h4,
+body[data-background-color="dark"] .card-success h5,
+body[data-background-color="dark"] .card-success h6,
+body[data-background-color="dark"] .card-warning .h1,
+body[data-background-color="dark"] .card-warning .h2,
+body[data-background-color="dark"] .card-warning .h3,
+body[data-background-color="dark"] .card-warning .h4,
+body[data-background-color="dark"] .card-warning .h5,
+body[data-background-color="dark"] .card-warning .h6,
+body[data-background-color="dark"] .card-warning h1,
+body[data-background-color="dark"] .card-warning h2,
+body[data-background-color="dark"] .card-warning h3,
+body[data-background-color="dark"] .card-warning h4,
+body[data-background-color="dark"] .card-warning h5,
+body[data-background-color="dark"] .card-warning h6,
+body[data-background-color="dark"] .card-danger .h1,
+body[data-background-color="dark"] .card-danger .h2,
+body[data-background-color="dark"] .card-danger .h3,
+body[data-background-color="dark"] .card-danger .h4,
+body[data-background-color="dark"] .card-danger .h5,
+body[data-background-color="dark"] .card-danger .h6,
+body[data-background-color="dark"] .card-danger h1,
+body[data-background-color="dark"] .card-danger h2,
+body[data-background-color="dark"] .card-danger h3,
+body[data-background-color="dark"] .card-danger h4,
+body[data-background-color="dark"] .card-danger h5,
+body[data-background-color="dark"] .card-danger h6,
+body[data-background-color="dark2"] .card-primary .h1,
+body[data-background-color="dark2"] .card-primary .h2,
+body[data-background-color="dark2"] .card-primary .h3,
+body[data-background-color="dark2"] .card-primary .h4,
+body[data-background-color="dark2"] .card-primary .h5,
+body[data-background-color="dark2"] .card-primary .h6,
+body[data-background-color="dark2"] .card-primary h1,
+body[data-background-color="dark2"] .card-primary h2,
+body[data-background-color="dark2"] .card-primary h3,
+body[data-background-color="dark2"] .card-primary h4,
+body[data-background-color="dark2"] .card-primary h5,
+body[data-background-color="dark2"] .card-primary h6,
+body[data-background-color="dark2"] .card-secondary .h1,
+body[data-background-color="dark2"] .card-secondary .h2,
+body[data-background-color="dark2"] .card-secondary .h3,
+body[data-background-color="dark2"] .card-secondary .h4,
+body[data-background-color="dark2"] .card-secondary .h5,
+body[data-background-color="dark2"] .card-secondary .h6,
+body[data-background-color="dark2"] .card-secondary h1,
+body[data-background-color="dark2"] .card-secondary h2,
+body[data-background-color="dark2"] .card-secondary h3,
+body[data-background-color="dark2"] .card-secondary h4,
+body[data-background-color="dark2"] .card-secondary h5,
+body[data-background-color="dark2"] .card-secondary h6,
+body[data-background-color="dark2"] .card-info .h1,
+body[data-background-color="dark2"] .card-info .h2,
+body[data-background-color="dark2"] .card-info .h3,
+body[data-background-color="dark2"] .card-info .h4,
+body[data-background-color="dark2"] .card-info .h5,
+body[data-background-color="dark2"] .card-info .h6,
+body[data-background-color="dark2"] .card-info h1,
+body[data-background-color="dark2"] .card-info h2,
+body[data-background-color="dark2"] .card-info h3,
+body[data-background-color="dark2"] .card-info h4,
+body[data-background-color="dark2"] .card-info h5,
+body[data-background-color="dark2"] .card-info h6,
+body[data-background-color="dark2"] .card-success .h1,
+body[data-background-color="dark2"] .card-success .h2,
+body[data-background-color="dark2"] .card-success .h3,
+body[data-background-color="dark2"] .card-success .h4,
+body[data-background-color="dark2"] .card-success .h5,
+body[data-background-color="dark2"] .card-success .h6,
+body[data-background-color="dark2"] .card-success h1,
+body[data-background-color="dark2"] .card-success h2,
+body[data-background-color="dark2"] .card-success h3,
+body[data-background-color="dark2"] .card-success h4,
+body[data-background-color="dark2"] .card-success h5,
+body[data-background-color="dark2"] .card-success h6,
+body[data-background-color="dark2"] .card-warning .h1,
+body[data-background-color="dark2"] .card-warning .h2,
+body[data-background-color="dark2"] .card-warning .h3,
+body[data-background-color="dark2"] .card-warning .h4,
+body[data-background-color="dark2"] .card-warning .h5,
+body[data-background-color="dark2"] .card-warning .h6,
+body[data-background-color="dark2"] .card-warning h1,
+body[data-background-color="dark2"] .card-warning h2,
+body[data-background-color="dark2"] .card-warning h3,
+body[data-background-color="dark2"] .card-warning h4,
+body[data-background-color="dark2"] .card-warning h5,
+body[data-background-color="dark2"] .card-warning h6,
+body[data-background-color="dark2"] .card-danger .h1,
+body[data-background-color="dark2"] .card-danger .h2,
+body[data-background-color="dark2"] .card-danger .h3,
+body[data-background-color="dark2"] .card-danger .h4,
+body[data-background-color="dark2"] .card-danger .h5,
+body[data-background-color="dark2"] .card-danger .h6,
+body[data-background-color="dark2"] .card-danger h1,
+body[data-background-color="dark2"] .card-danger h2,
+body[data-background-color="dark2"] .card-danger h3,
+body[data-background-color="dark2"] .card-danger h4,
+body[data-background-color="dark2"] .card-danger h5,
+body[data-background-color="dark2"] .card-danger h6 {
+    color: #fff !important;
+}
+body[data-background-color="dark"] .nav-line,
+body[data-background-color="dark2"] .nav-line {
+    border-color: rgba(181, 181, 181, 0.1) !important;
+}
+body[data-background-color="dark"] .accordion .card,
+body[data-background-color="dark2"] .accordion .card {
+    background: #1a2035 !important;
+}
+body[data-background-color="dark"] .accordion .card .card-body,
+body[data-background-color="dark2"] .accordion .card .card-body {
+    border-color: rgba(181, 181, 181, 0.1) !important;
+}
+body[data-background-color="dark"] .timeline > li > .timeline-panel:before,
+body[data-background-color="dark2"] .timeline > li > .timeline-panel:before {
+    border-left-color: rgba(181, 181, 181, 0.1);
+    border-right-color: rgba(181, 181, 181, 0.1);
+}
+body[data-background-color="dark"] .timeline > li > .timeline-panel:after,
+body[data-background-color="dark2"] .timeline > li > .timeline-panel:after {
+    border-left-color: #202940;
+    border-right-color: #202940;
+}
+body[data-background-color="dark"] .activity-feed .feed-item,
+body[data-background-color="dark2"] .activity-feed .feed-item {
+    border-color: rgba(181, 181, 181, 0.1) !important;
+}
+body[data-background-color="dark"] .timeline:before,
+body[data-background-color="dark"] .progress,
+body[data-background-color="dark"] .progress-stacked,
+body[data-background-color="dark2"] .timeline:before,
+body[data-background-color="dark2"] .progress,
+body[data-background-color="dark2"] .progress-stacked {
+    background-color: rgba(181, 181, 181, 0.1) !important;
+}
+body[data-background-color="dark"] .page-title,
+body[data-background-color="dark"] .breadcrumbs li a,
+body[data-background-color="dark2"] .page-title,
+body[data-background-color="dark2"] .breadcrumbs li a {
+    color: rgba(169, 175, 187, 0.82);
+}
+body[data-background-color="dark"] .page-category,
+body[data-background-color="dark2"] .page-category {
+    color: #828282;
+}
+body[data-background-color="dark"] .card-title,
+body[data-background-color="dark"] .card-title a,
+body[data-background-color="dark"] .card-title a:hover,
+body[data-background-color="dark"] .card-title a:focus,
+body[data-background-color="dark2"] .card-title,
+body[data-background-color="dark2"] .card-title a,
+body[data-background-color="dark2"] .card-title a:hover,
+body[data-background-color="dark2"] .card-title a:focus {
+    color: #fff;
+}
+body[data-background-color="dark"] .card-category,
+body[data-background-color="dark2"] .card-category {
+    color: #8b92a9;
+}
+body[data-background-color="dark"] .card-black,
+body[data-background-color="dark"] .card-primary,
+body[data-background-color="dark"] .card-secondary,
+body[data-background-color="dark"] .card-info,
+body[data-background-color="dark"] .card-success,
+body[data-background-color="dark"] .card-warning,
+body[data-background-color="dark"] .card-danger,
+body[data-background-color="dark2"] .card-black,
+body[data-background-color="dark2"] .card-primary,
+body[data-background-color="dark2"] .card-secondary,
+body[data-background-color="dark2"] .card-info,
+body[data-background-color="dark2"] .card-success,
+body[data-background-color="dark2"] .card-warning,
+body[data-background-color="dark2"] .card-danger {
+    color: #fff !important;
+}
+body[data-background-color="dark"] .card-black .card-title,
+body[data-background-color="dark"] .card-black .card-category,
+body[data-background-color="dark"] .card-primary .card-title,
+body[data-background-color="dark"] .card-primary .card-category,
+body[data-background-color="dark"] .card-secondary .card-title,
+body[data-background-color="dark"] .card-secondary .card-category,
+body[data-background-color="dark"] .card-info .card-title,
+body[data-background-color="dark"] .card-info .card-category,
+body[data-background-color="dark"] .card-success .card-title,
+body[data-background-color="dark"] .card-success .card-category,
+body[data-background-color="dark"] .card-warning .card-title,
+body[data-background-color="dark"] .card-warning .card-category,
+body[data-background-color="dark"] .card-danger .card-title,
+body[data-background-color="dark"] .card-danger .card-category,
+body[data-background-color="dark2"] .card-black .card-title,
+body[data-background-color="dark2"] .card-black .card-category,
+body[data-background-color="dark2"] .card-primary .card-title,
+body[data-background-color="dark2"] .card-primary .card-category,
+body[data-background-color="dark2"] .card-secondary .card-title,
+body[data-background-color="dark2"] .card-secondary .card-category,
+body[data-background-color="dark2"] .card-info .card-title,
+body[data-background-color="dark2"] .card-info .card-category,
+body[data-background-color="dark2"] .card-success .card-title,
+body[data-background-color="dark2"] .card-success .card-category,
+body[data-background-color="dark2"] .card-warning .card-title,
+body[data-background-color="dark2"] .card-warning .card-category,
+body[data-background-color="dark2"] .card-danger .card-title,
+body[data-background-color="dark2"] .card-danger .card-category {
+    color: #fff !important;
+}
+body[data-background-color="dark"] .nav-pills .nav-link:not(.active),
+body[data-background-color="dark2"] .nav-pills .nav-link:not(.active) {
+    background: #1a2035;
+    color: #a0aaac;
+    border-color: #20263d;
+}
+body[data-background-color="dark"] .card-pricing .specification-list li,
+body[data-background-color="dark2"] .card-pricing .specification-list li {
+    border-color: #373d4c;
+}
+body[data-background-color="dark"] .input-group-text,
+body[data-background-color="dark2"] .input-group-text {
+    border-color: #2f374b !important;
+    background-color: #1f283e;
+    color: #fff;
+}
+body[data-background-color="dark"] .input-solid,
+body[data-background-color="dark2"] .input-solid {
+    background: #363b4c !important;
+    border-color: #363b4c !important;
+}
+body[data-background-color="dark"] .table,
+body[data-background-color="dark2"] .table {
+    background-color: transparent;
+}
+body[data-background-color="dark"]
+    .list-group-messages
+    .list-group-item-title
+    a,
+body[data-background-color="dark"] .list-group .list-group-item-text,
+body[data-background-color="dark2"]
+    .list-group-messages
+    .list-group-item-title
+    a,
+body[data-background-color="dark2"] .list-group .list-group-item-text {
+    color: inherit;
+}
+body[data-background-color="dark"] .footer,
+body[data-background-color="dark2"] .footer {
+    border-top: 1px solid #293247;
+    background: #1f283e;
+}
+body[data-background-color="dark"] .form-control,
+body[data-background-color="dark"] .form-select,
+body[data-background-color="dark"] .form-group-default,
+body[data-background-color="dark"]
+    .select2-container--bootstrap
+    .select2-selection,
+body[data-background-color="dark2"] .form-control,
+body[data-background-color="dark2"] .form-select,
+body[data-background-color="dark2"] .form-group-default,
+body[data-background-color="dark2"]
+    .select2-container--bootstrap
+    .select2-selection {
+    background-color: #1a2035;
+    color: #fff;
+    border-color: #2f374b;
+}
+body[data-background-color="dark"] select option,
+body[data-background-color="dark2"] select option {
+    background: #1a2035;
+}
+body[data-background-color="dark"] .bootstrap-tagsinput,
+body[data-background-color="dark2"] .bootstrap-tagsinput {
+    background: transparent;
+}
+body[data-background-color="dark"] .selectgroup-button,
+body[data-background-color="dark2"] .selectgroup-button {
+    border: 1px solid #2f374b;
+}
+body[data-background-color="dark"] .conversations .message-header,
+body[data-background-color="dark2"] .conversations .message-header {
+    background: #1a2035;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.07);
+}
+body[data-background-color="dark"] .conversations .conversations-content,
+body[data-background-color="dark2"] .conversations .conversations-content {
+    color: #575962;
+    border-color: #2e364a;
+}
+body[data-background-color="dark"]
+    .mail-wrapper
+    .mail-content
+    .inbox-body
+    .email-list
+    .email-list-item.unread,
+body[data-background-color="dark2"]
+    .mail-wrapper
+    .mail-content
+    .inbox-body
+    .email-list
+    .email-list-item.unread {
+    background: #151a2b !important;
+}
+body[data-background-color="dark"]
+    .mail-wrapper
+    .mail-content
+    .inbox-body
+    .email-list
+    .email-list-item:hover,
+body[data-background-color="dark2"]
+    .mail-wrapper
+    .mail-content
+    .inbox-body
+    .email-list
+    .email-list-item:hover {
+    background: #171e2f !important;
+}
+body[data-background-color="dark"]
+    .page-with-aside
+    .page-aside
+    .aside-nav
+    .nav
+    > li:hover,
+body[data-background-color="dark"]
+    .page-with-aside
+    .page-aside
+    .aside-nav
+    .nav
+    > li:focus,
+body[data-background-color="dark"]
+    .page-with-aside
+    .page-aside
+    .aside-nav
+    .nav
+    > li.active,
+body[data-background-color="dark2"]
+    .page-with-aside
+    .page-aside
+    .aside-nav
+    .nav
+    > li:hover,
+body[data-background-color="dark2"]
+    .page-with-aside
+    .page-aside
+    .aside-nav
+    .nav
+    > li:focus,
+body[data-background-color="dark2"]
+    .page-with-aside
+    .page-aside
+    .aside-nav
+    .nav
+    > li.active {
+    background: rgba(0, 0, 0, 0.03);
+}
+body[data-background-color="dark"]
+    .page-with-aside
+    .page-aside
+    .aside-nav
+    .nav
+    > li.active
+    > a,
+body[data-background-color="dark2"]
+    .page-with-aside
+    .page-aside
+    .aside-nav
+    .nav
+    > li.active
+    > a {
+    color: #b9babf !important;
+}
+body[data-background-color="dark"] .board,
+body[data-background-color="dark2"] .board {
+    color: #575962;
+}
+body[data-background-color="dark"] .dropzone:hover,
+body[data-background-color="dark2"] .dropzone:hover {
+    background: #1a2035 !important;
+}
+body[data-background-color="dark"] .dropzone .dz-preview.dz-image-preview,
+body[data-background-color="dark2"] .dropzone .dz-preview.dz-image-preview {
+    background: transparent !important;
+}
+body[data-background-color="dark"] .jvm-zoom-btn,
+body[data-background-color="dark2"] .jvm-zoom-btn {
+    background: #fff;
+    color: #292929;
+}
+
+.border-left,
+.border-right,
+.border-bottom,
+.border-top {
+    border-color: #f0f1f3 !important;
+}
+
+.no-box-shadow {
+    box-shadow: none !important;
+}
+
+.hidden{
+    display: none;
+}

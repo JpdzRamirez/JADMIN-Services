@@ -237,42 +237,46 @@
 								<td> {{$servicio->estado}} </td>
 
 								<td>
+									<div class="buttons-list-container">
+										<div class="buttons-list-items"">
+											<a href="{{ route('servicios.detalles', ['servicio' => $servicio->id]) }}" class="btn btn-info btn-sm">Detalles</a>
 
-									<a href="{{ route('servicios.detalles', ['servicio' => $servicio->id]) }}" class="btn btn-info btn-sm">Detalles</a><br>
-
-									@if ($servicio->pago == "Vale electrónico")
-
-										@if ($servicio->estadocobro == 0)
-
-											<a href="/servicios/gestion_cobro/{{$servicio->id}}" data-toggle="tooltip" title="Cobro por horas y ruta bloqueado. (Click para habilitar)" class="btn btn-danger btn-sm">Horas y Ruta</a>
-
-										@else
-
-											<a href="/servicios/gestion_cobro/{{$servicio->id}}" data-toggle="tooltip" title="Cobro por horas y ruta habilitado. (Click para bloquear)" class="btn btn-success btn-sm">Horas y Ruta</a>
-
-										@endif
-
-									@endif
-
-									@if ($servicio->valeav != null && $servicio->fechaprogramada != null)
-
-											<button class="btn btn-sm btn-warning" onclick="getServicio({{$servicio->id}})">Editar</button>
-
-									@endif
-
-									@if ($servicio->valeav == null && $servicio->fechaprogramada != null)
-
-										@if ($servicio->clientes_id == 90 && $servicio->ruta != null)
-
-											<button class="btn btn-sm btn-warning" onclick="servicioMajorel({{$servicio->id}})">Editar</button>
-
-										@else	
-
-											<button class="btn btn-sm btn-warning" onclick="getEditarServicio({{$servicio->id}})">Editar</button>
-
-										@endif
-
-									@endif		
+											@if ($servicio->pago == "Vale electrónico")
+		
+												@if ($servicio->estadocobro == 0)
+		
+													<a href="/servicios/gestion_cobro/{{$servicio->id}}" data-toggle="tooltip" title="Cobro por horas y ruta bloqueado. (Click para habilitar)" class="btn btn-danger btn-sm">Horas y Ruta</a>
+		
+												@else
+		
+													<a href="/servicios/gestion_cobro/{{$servicio->id}}" data-toggle="tooltip" title="Cobro por horas y ruta habilitado. (Click para bloquear)" class="btn btn-success btn-sm">Horas y Ruta</a>
+		
+												@endif
+		
+											@endif
+		
+											@if ($servicio->valeav != null && $servicio->fechaprogramada != null)
+		
+													<button class="btn btn-sm btn-warning" onclick="getServicio({{$servicio->id}})">Editar</button>
+		
+											@endif
+		
+											@if ($servicio->valeav == null && $servicio->fechaprogramada != null)
+		
+												@if ($servicio->clientes_id == 90 && $servicio->ruta != null)
+		
+													<button class="btn btn-sm btn-warning" onclick="servicioMajorel({{$servicio->id}})">Editar</button>
+		
+												@else	
+		
+													<button class="btn btn-sm btn-warning" onclick="getEditarServicio({{$servicio->id}})">Editar</button>
+		
+												@endif
+		
+											@endif		
+										</div>
+									</div>
+	
 
 								</td>
 

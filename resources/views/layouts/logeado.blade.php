@@ -18,13 +18,13 @@
 						@if(isset($buscar))
 							@include('elements.buscar', ['url' => $url, 'placeholder' => $placeholder])
 						@endif
-						<h4 class="page-title">
+						<div class="page-title">
 							@if (Auth::user()->roles_id == 3 || Auth::user()->roles_id == 6)
 								<img src="/img/eds.jpg" width="100px" height="100px">
 							@else
 								<img src="/img/services.png" width="100px" height="100px">
 							@endif				 
-							@yield('sub_title', 'JADMIN')</h4>
+							<h4>@yield('sub_title', 'JADMIN')</h4></div>
 					</div>
 				</div>
 			</div>

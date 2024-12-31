@@ -238,34 +238,39 @@
 								</td>
 								<td> {{$servicio->estado}} </td>
 								<td>
-									<a href="{{ route('servicios.detalles', ['servicio' => $servicio->id]) }}" class="btn btn-info btn-sm">Detalles</a>
-									@if ($usuario->roles_id == 1 || $usuario->modulos[0]->pivot->editar == 1)
-										<a href="{{ route('novedades.listar', ['servicio' => $servicio->id]) }}" class="btn btn-warning btn-sm">Novedades</a>
-										@if ($servicio->estado == "Cancelado")
-											@if ($usuario->roles_id == 1)
-												<button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#Modal" value="{{$servicio->id}}">Devolución</button>
-											@else
-												@php
-													$fecha = Carbon\Carbon::now();
-												@endphp
-												@if ($servicio->cancelacion != null)
-													@if ($fecha->diffInMinutes($servicio->cancelacion->fecha) < 90)
+									<div class="buttons-list-container">
+										<div class="buttons-list-items"">
+											<a href="{{ route('servicios.detalles', ['servicio' => $servicio->id]) }}" class="btn btn-info btn-sm">Detalles</a>
+											@if ($usuario->roles_id == 1 || $usuario->modulos[0]->pivot->editar == 1)
+												<a href="{{ route('novedades.listar', ['servicio' => $servicio->id]) }}" class="btn btn-warning btn-sm">Novedades</a>
+												@if ($servicio->estado == "Cancelado")
+													@if ($usuario->roles_id == 1)
 														<button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#Modal" value="{{$servicio->id}}">Devolución</button>
+													@else
+														@php
+															$fecha = Carbon\Carbon::now();
+														@endphp
+														@if ($servicio->cancelacion != null)
+															@if ($fecha->diffInMinutes($servicio->cancelacion->fecha) < 90)
+																<button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#Modal" value="{{$servicio->id}}">Devolución</button>
+															@endif
+														@endif
 													@endif
 												@endif
-											@endif
-										@endif
-										@if ($servicio->clientes_id == 90 && $servicio->estado == "Finalizado" && $servicio->ruta != null)
-										<button class="btn btn-sm btn-dark" onclick="servicioFinalizadoMajorel({{$servicio->id}})">Reportar</button>
-										@endif
+												@if ($servicio->clientes_id == 90 && $servicio->estado == "Finalizado" && $servicio->ruta != null)
+												<button class="btn btn-sm btn-dark" onclick="servicioFinalizadoMajorel({{$servicio->id}})">Reportar</button>
+												@endif
+		
+												@if ($servicio->clientes_id == 90 && $servicio->estado <> "Finalizado" && $servicio->ruta != null)
+												<button class="btn btn-sm btn-sm" onclick="servicioMajorel2({{$servicio->id}})">Editar</button>
+												@endif
+		
+												@if ($servicio->estado == "No vehiculo" || $servicio->estado == "Cancelado" || $servicio->estado == "Cancelado devuelto")
+													<a href="/servicios/duplicar/{{$servicio->id}}" class="btn btn-sm btn-primary">Duplicar</a>
+												@endif
+										</div>
+									</div>
 
-										@if ($servicio->clientes_id == 90 && $servicio->estado <> "Finalizado" && $servicio->ruta != null)
-										<button class="btn btn-sm btn-sm" onclick="servicioMajorel2({{$servicio->id}})">Editar</button>
-										@endif
-
-										@if ($servicio->estado == "No vehiculo" || $servicio->estado == "Cancelado" || $servicio->estado == "Cancelado devuelto")
-											<a href="/servicios/duplicar/{{$servicio->id}}" class="btn btn-sm btn-primary">Duplicar</a>
-										@endif
 									@endif
 								</td>
 							</tr>

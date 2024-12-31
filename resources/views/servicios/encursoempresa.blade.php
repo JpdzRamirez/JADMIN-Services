@@ -66,7 +66,10 @@
 								</td>
 								<td> {{$servicio->estado}} </td>
 								<td>
-									<a href="{{ route('servicios.detalles', ['servicio' => $servicio->id]) }}" class="btn btn-info btn-sm">Detalles</a>
+									<div class="buttons-list-container">
+										<div class="buttons-list-items""><a href="{{ route('servicios.detalles', ['servicio' => $servicio->id]) }}" class="btn btn-info btn-sm">Detalles</a></div>
+									</div>
+									
 								</td>
 							</tr>
 						@empty

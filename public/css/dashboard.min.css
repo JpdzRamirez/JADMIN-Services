@@ -20000,8 +20000,7 @@ body {
   max-width: 1300px
 }
 
-.header-bg {
-  background: radial-gradient(at 50% -20%, #1967a9, #0a1832) fixed;
+.header-bg {  
   padding-bottom: 60px;
   box-shadow: 1px 0 14px 0 rgba(0, 0, 0, .5)
 }
@@ -20076,9 +20075,6 @@ body {
   margin: 0
 }
 
-#topnav .navbar-custom {
-  background-color: rgba(10, 24, 50, .15)
-}
 
 #topnav .navbar-toggle {
   border: 0;
@@ -20151,7 +20147,7 @@ body {
 }
 
 #topnav .navigation-menu>li>a {
-  display: block;
+
   color: rgba(255, 255, 255, .7);
   font-size: 15px;
   -webkit-transition: all .5s ease;
@@ -20172,8 +20168,6 @@ body {
   font-size: 14px;
   margin-right: 8px;
   text-align: center;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease
 }
 
 #topnav .navigation-menu>li>a i.mdi-drop {
@@ -20372,7 +20366,7 @@ body {
   }
 
   #topnav .has-submenu.active .submenu li.active>a {
-    color: #2f8ee0
+    color: #fff;
   }
 
   #topnav .navigation-menu>li.last-elements .submenu {
@@ -20387,13 +20381,7 @@ body {
     margin-right: 10px
   }
 
-  #topnav .navigation-menu>li:hover a {
-    color: #fff
-  }
 
-  #topnav .navigation-menu>li:hover a i {
-    color: #fff
-  }
 
   #topnav .navigation-menu>li .submenu {
     position: absolute;
@@ -20408,7 +20396,6 @@ body {
     opacity: 0;
     margin-top: 20px;
     -webkit-transition: all .2s ease;
-    transition: all .2s ease;
     background-color: #fff;
     box-shadow: 0 1px 12px rgba(0, 0, 0, .1);
     border-radius: 4px
@@ -20462,9 +20449,6 @@ body {
     transition: all .35s ease
   }
 
-  #topnav .navigation-menu>li .submenu li a:hover {
-    color: #2f8ee0
-  }
 
   #topnav .navigation-menu>li .submenu li span {
     display: block;
